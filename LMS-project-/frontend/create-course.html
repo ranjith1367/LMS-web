@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Create Course</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+        <h2>LMS Trainer</h2>
+        <ul>
+            <li><a href="trainer-dashboard.html">Dashboard</a></li>
+            <li><a href="create-course.html">Create Course</a></li>
+            <li><a href="my-students.html">My Students</a></li>
+            <li><a href="evaluate-assignments.html">Evaluate</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Create New Course</h1>
+        <form id="create-course-form">
+            <div class="form-group">
+                <label for="course-title">Course Title</label>
+                <input type="text" id="course-title" name="course-title" required>
+            </div>
+            <div class="form-group">
+                <label for="course-category">Category</label>
+                <select id="course-category" required>
+                    <option value="">-- Select Category --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="course-thumbnail">Thumbnail filename (Optional)</label>
+                <input type="file" id="course-thumbnail" placeholder="e.g. python.jpg">
+            </div>
+            <div class="form-group">
+                <label for="course-description">Description</label>
+                <textarea id="course-description" name="course-description" rows="4"
+                required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="learning-objectives">Learning Objectives</label>
+                <textarea id="learning-objectives" name="learning-objectives" rows="3"
+                placeholder="One Per Line"></textarea>
+            </div>
+            <div class="form-group">
+            <label for="course-level">Level (optional)</label>
+            <select id="course-level">
+                <option value="">-- Not specified --</option>
+                <option value="BEGINNER">Beginner</option>
+                <option value="INTERMEDIATE">Intermediate</option>
+                <option value="ADVANCED">Advanced</option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label for="course-duration">Duration in hours (optional)</label>
+            <input type="number" id="course-duration" min="1">
+            </div>
+            <div class="form-actions">
+                <button type="submit">Create Course</button>
+            </div>
+        </form>
+        <p id="form-message"></p>
+    </main>
+    <script src="script.js"></script>
+    </body>
+</html>

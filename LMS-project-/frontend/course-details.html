@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Course Details</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav>
+            <h2>LMS</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id="course-title">Course Title</h1>
+            <p id="course-category">Category</p>
+            <p id="course-rating">Rating</p>
+            <p id="course-description">Description goes here.</p>
+            <button id="enroll-btn">Enroll in this Course</button>
+            <p id="enroll-message"></p>
+            
+            <section id="course-content-section">
+                <h2>Course Content</h2>
+            <div id="course-content">
+                <p>Loading modules...</p>
+            </div>
+            <div id="course-progress">
+                Loading progress...
+            </div>
+            </section>
+
+            <div class="course-actions-links">
+                <a id="take-quiz-link" href="#">
+            <button type="button">Take Quiz</button>
+                </a>
+            <p id="quiz-link-message"></p>
+                <a href="assignment-submit.html"><button>Submit Assignment</button></a> 
+                <div id="assignment-links"><p>Loading assignments...</p></div>
+                <button id="view-certificate-btn">View Certificate</button><p id="certificate-message"></p>         
+            </div>
+            <section id="reviews-section">
+                <h2>Reviews & Ratings</h2>
+                <p id="rating-summary"></p>
+                <div id="reviews-list"></div>
+
+                    <h3>Leave a Review</h3>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="review-rating">Rating</label>
+                        <select id="review-rating" required>
+                            <option value="">-- Select Rating --</option>
+                            <option value="1">1 - Very Poor</option>
+                            <option value="2">2 - Poor</option>
+                            <option value="3">3 - Average</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Excellent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Your Review</label>
+                        <textarea id="review-text" rows="3" required></textarea>
+                    </div>
+                    <button type="submit">Submit Review</button>
+                </form>
+                <p id="review-message"></p>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+

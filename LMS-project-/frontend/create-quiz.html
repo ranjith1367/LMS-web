@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Create Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2>LMS Trainer</h2>
+        <ul>
+            <li><a href="trainer-dashboard.html">Dashboard</a></li>
+            <li><a href="create-course.html">Create Course</a></li>
+            <li><a href="trainer-dashboard.html">Course Content</a></li>
+            <li><a href="my-students.html">My Students</a></li>
+            <li><a href="evaluate-assignments.html">Evaluate</a></li>
+            <li><a href="trainer-profile.html">Profile</a></li>
+            <li><a href="create-quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Create Quiz</h1>
+        <div class="form-group">
+            <label for="quiz-title">Quiz Title</label>
+            <input type="text" id="quiz-title" placeholder="e.g. Python Basics Quiz" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quiz-module">Module (Optional)</label>
+            <select id="quiz-module">
+                <option value="">-- None --</option>
+                <option value="1">Module 1: Python Basics</option>
+                <option value="2">Module 2: Control Flow</option>
+                <option value="3">Module 3: Functions</option>
+            </select>
+        </div>
+
+        <div class="quiz-settings-row">
+            <div class="form-group">
+                <label for="quiz-time-limit">Time Limit (Minutes)</label>
+                <input type="number" id="quiz-time-limit" min="1" value="30" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quiz-max-attempts">Max Attempts</label>
+                <input type="number" id="quiz-max-attempts" min="1" value="3" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quiz-passing-score">Passing Score (%)</label>
+                <input type="number" id="quiz-passing-score" min="1" max="100" value="60" required>
+            </div>
+        </div>
+
+        <h2>Questions</h2>
+        <div id="question-list">
+
+            <div class="question-block">
+                <div class="form-group">
+                    <label>Questions Text</label>
+                    <input type="text" class="question-text" placeholder="Enter the Question">
+                </div>
+                <div class="options-grid">
+                    <input type="text" class="option-input" placeholder="Option A">
+                    <input type="text" class="option-input" placeholder="Option B">
+                    <input type="text" class="option-input" placeholder="Option C">
+                    <input type="text" class="option-input" placeholder="Option D">                    
+                </div>
+            <div class="quiz-settings-row">
+                <div class="form-group">
+                    <label >Correct Option</label>
+                    <select class="correct-option">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Marks</label>
+                    <input type="number" class="question-marks" value="5" min="1">
+                </div>
+            </div>
+                <button class="remove-question-btn">Remove Question</button>
+            </div>
+        </div>
+        <button id="add-question-btn">+ Add Another Question</button>
+        <button id="save-quiz-btn">Save Quiz</button>
+
+        <p id="quiz-save-message"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

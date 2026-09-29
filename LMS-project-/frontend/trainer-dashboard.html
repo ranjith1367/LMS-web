@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Trainer Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav>
+            <h2>LMS Trainer</h2>
+            <ul>
+                <li><a href="trainer-dashboard.html">🏠 Dashboard</a></li>
+                <li><a href="create-course.html">Create Course</a></li>
+                <li><a href="my-students.html">My Students</a></li>
+                <li><a href="evaluate-assignments.html">Evaluate</a></li>
+                <li><a href="create-quiz.html">Quiz</a></li>
+                <li><a href="create-assignment.html">New Assignment</a></li>
+                <li><a href="trainer-profile.html">Profile</a></li>
+                <li><a href="index.html" class="logout-link">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id="welcome-user">Welcome</h1>
+            <section id="enrolled-courses">
+
+            <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="my-courses-count">6</h3>
+                <p>My Courses</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="my-students-count">248</h3>
+                <p>Total Students</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pending-review-count">2</h3>
+                <p>Pending Assignments</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="avg-rating">4.6</h3>
+                <p>Average Rating</p>
+            </div>
+        </div>
+
+        <section id="my-courses">
+            <h2>My Courses</h2>
+            <div id="my-courses-list"></div>
+        </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

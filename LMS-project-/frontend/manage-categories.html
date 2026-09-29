@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Manage Categories</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <nav>
+            <h2>LMS Admin</h2>
+            <ul>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="manage-users.html">Manage Users</a></li>
+                <li><a href="manage-categories.html">Manage Categories</a></li>
+                <li><a href="course-approvals.html">Course Approvals</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Manage Categories</h1>
+            <form id="category-form">
+                <div class="form-group">
+                    <label for="category-name">Category Name</label>
+                    <input type="text" id="category-name" 
+                    placeholder="e.g. Cloud Computing" required>
+                </div>
+                <div class="form-group">
+                    <label for="category-description">Description (Optional)</label>
+                    <textarea id="category-description" rows="2"></textarea>
+                </div>
+                <button type="submit">Add Category</button>
+            </form>
+
+            <p id="category-message"></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="category-list">
+                </tbody>
+            </table>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

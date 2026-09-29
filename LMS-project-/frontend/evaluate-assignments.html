@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Evaluate Assignments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>LMS Trainer</h2>
+        <ul>
+            <li><a href="trainer-dashboard.html">Dashboard</a></li>
+            <li><a href="create-course.html">Create Course</a></li>
+            <li><a href="my-students.html">My Students</a></li>
+            <li><a href="evaluate-assignments.html">Evaluate</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Evaluate Assignments</h1>
+
+        <div class="form-group">
+        <label for="assignment-select">Select Assignment</label>
+        <select id="assignment-select">
+            <option value="">-- Loading assignments... --</option>
+        </select>
+        </div>
+
+        <div id="submissions-list"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

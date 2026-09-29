@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Submit Assignment</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2>LMS</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id="assignment-title">Assignment</h1>
+            <p><strong>Deadline:</strong> <span id="assignment-deadline"></span></p>
+            <p><strong>Max Marks:</strong> <span id="assignment-max-marks"></span></p>
+            <p><strong>Allowed File Types:</strong> <span id="assignment-file-types"></span></p>
+            <p id="assignment-description"></p>
+
+            <form id="assignment-form">
+                <div class="form-group">
+                    <label for="submission-file">Upload Your Submission</label>
+                    <input type="file" id="submission-file" name="submission-file" required>
+                </div>
+                <div class="form-group">
+                    <label for="submission-comments">Comments (Optional)</label>
+                    <textarea id="submission-comments" rows="3"></textarea>
+                </div>
+                <button type="submit">Submit Assignment</button>
+            </form>
+                <p id="submission-message"></p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

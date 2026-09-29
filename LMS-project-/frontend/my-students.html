@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - My Students</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>LMS Trainer</h2>
+        <ul>
+            <li><a href="trainer-dashboard.html">Dashboard</a></li>
+            <li><a href="create-course.html">Create Course</a></li>
+            <li><a href="my-students.html">My Students</a></li>
+            <li><a href="evaluate-assignments.html">Evaluate</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>My Students</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Progress</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="students-table-body">
+                <tr><td colspan="4">Loading Students...</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

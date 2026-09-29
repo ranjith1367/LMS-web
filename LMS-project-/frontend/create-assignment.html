@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Create Assignment</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2>LMS Trainer</h2>
+            <ul>
+                <li><a href="trainer-dashboard.html">Dashboard</a></li>
+                <li><a href="create-course.html">Create Course</a></li>
+                <li><a href="trainer-dashboard.html">Course Content</a></li>
+                <li><a href="create-quiz.html">Quiz</a></li>
+                <li><a href="my-students.html">My Students</a></li>
+                <li><a href="evaluate-assignments.html">Evaluate</a></li>
+                <li><a href="trainer-profile.html">Profile</a></li>
+                <li><a href="create-assignment.html">New Assignment</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Create Assignment</h1>
+
+            <form id="create-assignment-form">
+                <div class="form-group">
+                    <label for="assignment-title">Assignment Title</label>
+                    <input type="text" id="assignment-title" placeholder="e.g. Build a Calculator" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="assignment-module">Module</label>
+                    <select id="assignment-module" required>
+                        <option value="">-- Select Module --</option>
+                        <option value="1">Module 1: Python Basics</option>
+                        <option value="2">Module 2: Control Flow</option>
+                        <option value="3">Module 3: Functions</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="assignment-description">Description</label>
+                    <textarea id="assignment-description" rows="4" required></textarea>
+                </div>
+
+                <div class="quiz-settings-row">
+                    <div class="form-group">
+                        <label for="assignment-max-marks">Maximum Marks</label>
+                        <input type="number" id="assignment-max-marks" min="1" value="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignment-deadline">Deadline</label>
+                        <input type="datetime-local" id="assignment-deadline" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="assignment-file-types">Allowed File Types</label>
+                    <input type="text" id="assignment-file-types" placeholder="e.g. py, zip, pdf" required>
+                </div>
+                <button type="submit">Create Assignment</button>
+            </form>
+            <p id="assignment-create-message"></p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

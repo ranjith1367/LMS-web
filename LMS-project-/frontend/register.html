@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Register</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>Learning Management System</h1>
+
+            <form id="register-form">
+                <h2>Create an Account</h2>
+
+                <div class="form-group">
+                    <label for="username">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="reg-email" name="reg-email" required>
+                </div>  
+
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="reg-password" name="reg-password" required minlength="6">
+                        <span class="toggle-password" data-target="reg-password">Show</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirm-password" name="confirm-password" required minlength="6">
+                        <span class="toggle-password" data-target="confirm-password">Show</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-role">Register As</label>
+                    <select id="reg-role" name="reg-role" required>
+                        <option value="">-- Select Role --</option>
+                        <option value="student">Student</option>
+                        <option value="instructor">Trainer</option>
+                    </select>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+            <p id="register-message"></p>
+            <p>Already have an account? <a href="index.html">Login here</a>.</p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

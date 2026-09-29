@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Admin Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2>LMS Admin</h2>
+            <ul>
+                <li><a href="admin-dashboard.html">🏠 Dashboard</a></li>
+                <li><a href="manage-users.html">Manage Users</a></li>
+                <li><a href="course-approvals.html">Course Approvals</a></li>
+                <li><a href="manage-categories.html">Categories</a></li>
+                <li><a href="admin-profile.html">Profile</a></li>
+                <li><a href="index.html" class="logout-link">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Admin Dashboard</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="total-students">--</h3>
+                    <p>Total Students</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-trainers">--</h3>
+                    <p>Total Trainers</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-courses">--</h3>
+                    <p>Total Courses</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="published-courses">--</h3>
+                    <p>Published Courses</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="pending-approvals">--</h3>
+                    <p>Pending Courses</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-enrollments">--</h3>
+                    <p>Total Enrollments</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="completion-rate">--</h3>
+                    <p>Overall Completion Rate</p>
+                </div>
+                <section id="notifications">
+                    <h2>Notifications</h2>
+                    <ul id="dashboard-notifications-list"><li>Loading...</li></ul>
+                </section>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

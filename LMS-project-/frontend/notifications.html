@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Notifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>LMS</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Notifications</h1>
+
+        <button onclick="markAllNotificationsAsRead()">
+            Mark All as Read
+        </button>
+
+        <ul id="notification-list">
+            <li class="notification-item">
+                Loading notifications...
+            </li>
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - My Profile</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2>LMS</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>My Profile</h1>
+
+            <div class="profile-picture-section">
+                <div id="profile-pic-placeholder" class="pic-circle">No Photo</div>
+                <img id="profile-pic-preview" class="pic-circle" style="display: none;" alt="Profile Picture">
+                <div>
+                    <label for="profile-pic-input" class="upload-label">Change Photo</label>
+                    <input type="file" id="profile-pic-input" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-id">User ID</label>
+                    <input type="text" id="profile-id" disabled>
+                </div>
+                
+                <div class="form-group">
+                    <label for="profile-name">Full Name</label>
+                    <input type="text" id="profile-name" value="Student Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-email">Email</label>
+                    <input type="text" id="profile-email" value="student@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-role">Role</label>
+                    <input type="text" id="profile-role" value="Student" disabled>
+                </div>
+
+                <h3>Change Password (Optional)</h3>
+
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="new-password" minlength="7">
+                        <span class="toggle-password" data-target="new-password">Show</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-new-password">Confirm New Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirm-new-password" minlength="7">
+                        <span class="toggle-password" data-target="confirm-new-password">Show</span>
+                    </div>
+                </div>
+
+                <button type="submit">Save Changes</button>
+            </form>
+            <p id="profile-message"></p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

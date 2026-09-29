@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LMS - Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   <body>
+
+    <div class="auth-page">
+        <div class="auth-brand">
+            <h1>Learning shouldn't wait for the right moment. Start now.</h1>
+            <p>Track your courses, take quizzes, submit assignments, and earn certificates — all in one place.</p>
+        </div>
+
+        <div class="auth-form-side">
+            <form id="login-form">
+                <h2>Sign in</h2>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <span class="toggle-password" data-target="password">Show</span>
+                    </div>
+                </div>
+
+                <button type="submit">Sign in</button>
+
+                <p id="login-message" style="margin-top: 14px;"></p>
+                <p style="margin-top: 18px; font-size: 14px;"><a href="forgot-password.html">Forgot your password?</a></p>
+                <p style="margin-top: 8px; font-size: 14px;">Don't have an account? <a href="register.html">Register here</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink: #1E2A45;
+    --ink-light: #2E3D5F;
+    --gold: #B8862E;
+    --paper: #F7F6F2;
+    --white: #FFFFFF;
+    --slate: #5B6472;
+    --border: #E1DFD8;
+    --success: #2F7D5C;
+    --success-dark: #24614A;
+    --danger: #B0402E;
+    --danger-dark: #8C3324;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    color: var(--ink);
+}
+
+h1 { font-size: 30px; margin-bottom: 20px; font-weight: 600; }
+h2 { font-size: 22px; margin-bottom: 14px; font-weight: 600; }
+h3 { font-size: 17px; font-weight: 600; }
+
+a {
+    color: var(--ink);
+}
+
+/* Visible focus states for accessibility — anything keyboard-focusable gets a clear outline */
+input:focus, select:focus, textarea:focus, button:focus, a:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--ink);
+    color: var(--white);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2 {
+    color: var(--white);
+    font-size: 19px;
+    letter-spacing: 0.3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+}
+
+nav ul li a {
+    color: #D8DCE6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+nav ul li a:hover {
+    color: var(--white);
+    border-bottom-color: var(--gold);
+}
+
+main {
+    padding: 32px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Cards — one consistent, restrained treatment instead of the generic
+   heavy-shadow SaaS-card look. A thin border does the work; shadow is
+   nearly invisible, just enough to lift the card off the page. */
+.course-card, .stat-card, .approval-item, .trainer-course-item,
+.module-block, .question-block, .evaluation-item, .review-item,
+.progress-item, .certificate, form {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(30, 42, 69, 0.06);
+}
+
+.course-card { max-width: 320px; }
+
+.stat-card { text-align: center; }
+.stat-card h3 { font-size: 30px; color: var(--ink); }
+.stat-card p { color: var(--slate); margin-top: 4px; font-size: 13px; }
+
+.stats-grid, .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.approval-item, .trainer-course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+/* Buttons — one shared shape (pill-ish rounded rect), color communicates
+   the action's nature rather than each button inventing its own shape. */
+button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--ink);
+    transition: background-color 0.15s;
+}
+
+button:hover { background-color: var(--ink-light); }
+
+.approve-btn, .user-reactivate-btn, .add-lesson-btn, .course-edit-btn,
+.user-edit-btn, #save-quiz-btn { background-color: var(--success); }
+.approve-btn:hover, .user-reactivate-btn:hover, .add-lesson-btn:hover,
+.course-edit-btn:hover, .user-edit-btn:hover, #save-quiz-btn:hover { background-color: var(--success-dark); }
+
+.reject-btn, .course-delete-btn, .user-suspend-btn, .delete-module-btn,
+.delete-lesson-btn, .category-delete-btn, .remove-question-btn { background-color: var(--danger); }
+.reject-btn:hover, .course-delete-btn:hover, .user-suspend-btn:hover,
+.delete-module-btn:hover, .delete-lesson-btn:hover, .category-delete-btn:hover,
+.remove-question-btn:hover { background-color: var(--danger-dark); }
+
+#add-question-btn, .save-draft-btn { background-color: var(--slate); }
+#add-question-btn:hover, .save-draft-btn:hover { background-color: #454d59; }
+
+/* Forms */
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink);
+}
+
+.form-group input, .form-group select, .form-group textarea,
+#search-box, #category-form input, .option-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: var(--paper);
+}
+
+/* Status badges — semantic colors reused across pages, no shape change */
+.status-badge {
+    display: inline-block;
+    padding: 3px 11px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+.status-pending { background-color: var(--gold); }
+.status-published { background-color: var(--success); }
+.status-draft { background-color: var(--slate); }
+
+/* Tables */
+table {
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+}
+th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+th { background-color: var(--ink); color: var(--white); font-weight: 500; }
+tbody tr:hover { background-color: var(--paper); }
+
+/* Certificate */
+.certificate {
+    border: 3px double var(--gold);
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+}
+.certificate h2 { color: var(--ink); margin: 14px 0; }
+
+/* Progress bars */
+.progress-bar-bg {
+    background-color: #E7E4DC;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+.progress-bar-fill { background-color: var(--success); height: 100%; }
+
+/* Password toggle + profile picture (unchanged structure, refined color) */
+.password-wrapper { position: relative; }
+.password-wrapper input { padding-right: 54px; }
+.toggle-password {
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+    cursor: pointer; font-size: 13px; color: var(--gold); font-weight: 600; user-select: none;
+}
+
+.pic-circle { width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--ink); }
+#profile-pic-placeholder { background-color: var(--border); color: var(--slate); display: flex; align-items: center; justify-content: center; font-size: 13px; text-align: center; }
+#profile-pic-preview { object-fit: cover; }
+.upload-label { background-color: var(--ink); color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer; display: inline-block; }
+.profile-picture-section { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+
+/* 404 page */
+.not-found-page { text-align: center; padding: 100px 20px; }
+.not-found-page h1 { font-family: 'Lora', serif; font-size: 72px; color: var(--ink); }
+
+/* Login / Register hero layout */
+.auth-page {
+    display: flex;
+    min-height: 100vh;
+}
+.auth-brand {
+    flex: 1;
+    background-color: var(--ink);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+.auth-brand h1 {
+    font-size: 44px;
+    color: var(--white);
+    max-width: 420px;
+    line-height: 1.25;
+}
+.auth-brand p {
+    color: #C7CCDA;
+    margin-top: 16px;
+    max-width: 380px;
+    font-size: 15px;
+}
+.auth-form-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+.auth-form-side form {
+    width: 100%;
+    max-width: 380px;
+}
+@media (max-width: 800px) {
+    .auth-page { flex-direction: column; }
+    .auth-brand { padding: 40px; }
+    .auth-brand h1 { font-size: 30px; }
+}
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lesson-list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.lesson-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.delete-lesson-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.add-lesson-row {
+    display: flex;
+    gap: 10px;
+}
+
+.add-lesson-row input {
+    flex: 1;
+}
+
+.quiz-settings-row {
+    display: flex;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.quiz-settings-row .form-group {
+    flex: 1;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.course-actions-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.quiz-question label {
+    display: block;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.logout-link {
+    margin-left: 10px;
+    color: #E4A896 !important;
+}
+.logout-link:hover {
+    color: white !important;
+    border-bottom-color: var(--danger) !important;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--border);
+    border-top-color: var(--ink);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.loading-state {
+    display: flex;
+    align-items: center;
+    color: var(--slate);
+    padding: 20px 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--slate);
+}
+.empty-state .empty-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
